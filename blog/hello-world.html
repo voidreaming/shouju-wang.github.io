@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World: Starting My PhD Journey - Shouju Wang</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127800;</text></svg>">
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-name">Shouju Wang</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#news">News</a></li>
+      <li><a href="../index.html#publications">Publications</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="index.html">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="post-container">
+  <a href="index.html" class="post-back">&larr; Back to Blog</a>
+  <div class="post-header">
+    <h1 class="post-title">Hello World: Starting My PhD Journey</h1>
+    <p class="post-meta">March 2026 &middot; 3 min read</p>
+  </div>
+
+  <div class="post-content">
+    <p>
+      It feels surreal to finally write this. After four years at Wuhan University and an incredible
+      internship at Microsoft Research Asia, I've officially begun my PhD at the University of Hawai'i at M&#257;noa.
+    </p>
+
+    <h2>Why Privacy &amp; LLM Agents?</h2>
+    <p>
+      During my time at MSRA, I worked on understanding how LLM-powered agents handle privacy in
+      realistic settings. The more I dug into the problem, the more I realized how fundamental the
+      gap is between what these models <em>know</em> about privacy norms and how they actually
+      <em>behave</em> when deployed as agents. This question &mdash; the privacy judgment-action gap &mdash;
+      became the seed of my PhD research.
+    </p>
+
+    <h2>What I'm Working On</h2>
+    <p>
+      My current research focuses on <strong>multimodal contextual integrity</strong> for LLM and VLM agents.
+      Contextual integrity, originally proposed by Helen Nissenbaum, provides a framework for reasoning about
+      privacy as appropriate information flow. I'm extending this framework to multimodal settings where
+      agents process images, text, and structured data simultaneously.
+    </p>
+
+    <blockquote>
+      Privacy is not about secrecy. It's about the appropriate flow of information in context.
+    </blockquote>
+
+    <h2>Life in Hawai'i</h2>
+    <p>
+      Moving from Wuhan to Honolulu has been quite the change. The weather is perpetually beautiful,
+      the campus is surrounded by mountains, and the research environment here is warm and collaborative.
+      I'm grateful for the opportunity to work with Prof. Haopeng Zhang and the wonderful people in our lab.
+    </p>
+
+    <p>
+      This blog will be a space for me to share research thoughts, paper readings, and reflections
+      on the PhD journey. Stay tuned!
+    </p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Shouju Wang &middot; Built with <span class="heart">&#10084;</span> &middot; Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+</footer>
+
+<script>
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  });
+</script>
+
+</body>
+</html>

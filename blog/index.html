@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Shouju Wang</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127800;</text></svg>">
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-name">Shouju Wang</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#news">News</a></li>
+      <li><a href="../index.html#publications">Publications</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="index.html">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="post-container">
+  <div class="post-header">
+    <h1 class="post-title" style="margin-bottom:1.5rem;">Blog</h1>
+  </div>
+
+  <div class="blog-grid" style="margin-top:0;">
+
+    <a class="blog-card" href="hello-world.html">
+      <div class="blog-card-date">Mar 2026</div>
+      <div class="blog-card-title">Hello World: Starting My PhD Journey</div>
+      <div class="blog-card-excerpt">Reflections on my first months as a CS PhD student at UH Manoa, and what I've learned about research so far.</div>
+      <span class="blog-card-tag">Life</span>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Shouju Wang &middot; Built with <span class="heart">&#10084;</span> &middot; Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+</footer>
+
+<script>
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  });
+</script>
+
+</body>
+</html>
