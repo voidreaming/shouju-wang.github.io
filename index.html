@@ -10,10 +10,19 @@
 </head>
 <body>
 
+<!-- Floating leaves (gentle, few) -->
+<div class="floating-leaves" aria-hidden="true">
+  <span class="leaf" style="left:8%;animation-delay:0s;animation-duration:18s;">&#127807;</span>
+  <span class="leaf" style="left:25%;animation-delay:4s;animation-duration:22s;">&#127808;</span>
+  <span class="leaf" style="left:55%;animation-delay:8s;animation-duration:20s;">&#127807;</span>
+  <span class="leaf" style="left:78%;animation-delay:2s;animation-duration:24s;">&#127808;</span>
+  <span class="leaf" style="left:92%;animation-delay:12s;animation-duration:19s;">&#127807;</span>
+</div>
+
 <!-- Navigation -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="nav-name">Shouju Wang</a>
+    <a href="index.html" class="nav-name"><span class="nav-leaf">&#127793;</span> Shouju Wang</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#news">News</a></li>
@@ -28,19 +37,28 @@
 <div class="hero" id="about">
   <div class="hero-avatar">
     <img src="images/avatar.jpg" alt="Shouju Wang">
+    <p class="avatar-quote">&ldquo;The only way to do great work is to love what you do.&rdquo;</p>
+    <div class="avatar-interests">
+      <a class="avatar-interest" href="blog/index.html?tag=reading">&#128218;<span>Literature</span></a>
+      <a class="avatar-interest" href="blog/index.html?tag=music">&#127928;<span>Rock Music</span></a>
+      <a class="avatar-interest" href="blog/index.html?tag=photography">&#128247;<span>Photography</span></a>
+      <a class="avatar-interest" href="blog/index.html?tag=life">&#127758;<span>Curious Explorer</span></a>
+    </div>
   </div>
   <div class="hero-info">
     <h1>Shouju Wang</h1>
     <p class="subtitle">Ph.D. Student in Computer Science</p>
     <p class="bio">
-      I am a first-year CS Ph.D. student at the <strong>University of Hawai'i at M&#257;noa</strong>,
-      advised by <a href="#" style="color:var(--accent-hover); text-decoration:none; border-bottom:1px solid var(--border-soft);">Prof. Haopeng Zhang</a>.
-      I received my B.Eng. from <strong>Wuhan University</strong> (Hongyi Honor College).
-      Previously, I was a research intern at <strong>Microsoft Research Asia</strong>.
+      I'm a Computer Science Ph.D. student at the University of &#127796; <strong>Hawai'i at M&#257;noa</strong>.
+      I'm grateful to be advised by <a href="#" style="color:var(--accent-hover); text-decoration:none; border-bottom:1px solid var(--border-soft);">Prof. Haopeng Zhang</a>.
+      My research focuses on <strong>LLM Privacy</strong>, <strong>Contextual Integrity</strong>, and <strong>Agent Alignment</strong>,
+      with a particular interest in multimodal contextual integrity for LLM/VLM agents.
     </p>
     <p class="bio">
-      My research focuses on <strong>LLM privacy</strong>, <strong>agent alignment</strong>, and <strong>trustworthy AI</strong>.
-      I am particularly interested in contextual integrity for multimodal LLM agents and building safe, privacy-aware AI systems.
+      Previously, I did my undergrad in CS (Honors) at <strong>Wuhan University</strong> (Hongyi Honor College).
+      I was fortunate to work as a research intern at <strong>Microsoft Research Asia</strong> (Social Computing &amp; DKI Groups),
+      where I worked on realistic privacy mitigation for LLM agents and intelligent meeting-time recommendation for Microsoft Teams.
+      I also spent time as a research assistant at <strong>Duke Kunshan University</strong>, working on fair graph anomaly detection.
     </p>
     <div class="hero-links">
       <a href="mailto:shoujuw@hawaii.edu">
@@ -71,9 +89,8 @@
     <span class="interest-tag">Contextual Integrity</span>
     <span class="interest-tag">Agent Alignment</span>
     <span class="interest-tag">Multimodal LLM Agents</span>
-    <span class="interest-tag">Trustworthy AI</span>
-    <span class="interest-tag">Fair Graph Learning</span>
   </div>
+  <p class="collab-note">I am actively looking for collaboration. Feel free to reach out!</p>
 </section>
 
 <!-- News -->
@@ -81,8 +98,12 @@
   <h2 class="section-title">News</h2>
   <ul class="news-list">
     <li class="news-item">
-      <span class="news-date">2026</span>
-      <span class="news-content">New preprint: <a href="#">MPCI-Bench</a> -- a benchmark for multimodal pairwise contextual integrity evaluation of LLM agents.</span>
+      <span class="news-date">May 2026</span>
+      <span class="news-content">Will join <strong>Zoom Gen AI</strong> as a research intern, focusing on agent safety and privacy.</span>
+    </li>
+    <li class="news-item">
+      <span class="news-date">Jan 2026</span>
+      <span class="news-content">New preprint: <a href="#">MPCI-Bench</a> &mdash; a benchmark for multimodal pairwise contextual integrity evaluation of LLM agents.</span>
     </li>
     <li class="news-item">
       <span class="news-date">Sep 2025</span>
@@ -211,14 +232,23 @@
 
 <!-- Footer -->
 <footer>
-  <p>&copy; 2026 Shouju Wang &middot; Built with <span class="heart">&#10084;</span> &middot; Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+  <p class="footer-quote">&ldquo;Not all those who wander are lost.&rdquo; &mdash; J.R.R. Tolkien</p>
+  <p>&copy; 2026 Shouju Wang &middot; Built with <span class="heart">&#127793;</span> &middot; Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
 </footer>
 
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">&#127793;</button>
+
 <script>
-  // Navbar scroll effect
+  // Navbar scroll effect + scroll-to-top visibility
   const nav = document.getElementById('navbar');
+  const scrollBtn = document.getElementById('scrollTop');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 10);
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   // Smooth scroll for anchor links
@@ -230,6 +260,19 @@
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
+  });
+
+  // Intersection Observer for fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('section, .pub-card, .exp-card, .personal-card, .blog-card').forEach(el => {
+    el.classList.add('fade-target');
+    observer.observe(el);
   });
 </script>
 
